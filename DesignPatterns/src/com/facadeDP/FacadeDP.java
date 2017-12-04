@@ -90,7 +90,7 @@ public class FacadeDP {
 			Scanner sc = new Scanner(System.in);
 			choice = sc.nextInt();
 			ShopKeeper sk = new ShopKeeper();
-			sc.close();
+			//sc.close();
 
 			switch (choice) {
 			case 1: {
