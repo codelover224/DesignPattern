@@ -1,5 +1,49 @@
 package com.statePattern;
 
+interface State {
+	public void doAction(Context context);
+}
+
+class Context {
+	private State state;
+
+	public Context() {
+		state = null;
+	}
+
+	public void setState(State state) {
+		this.state = state;
+	}
+
+	public State getState() {
+		return state;
+	}
+}
+
+class StartState implements State {
+
+	@Override
+	public void doAction(Context context) {
+		System.out.println("Player is in start state");
+		context.setState(this);
+	}
+
+	public String toString() {
+		return "Start State";
+	}
+}
+
+class StopState implements State {
+	public void doAction(Context context) {
+		System.out.println("Player is in stop state");
+		context.setState(this);
+	}
+
+	public String toString() {
+		return "Stop State";
+	}
+}
+
 public class StatePatternDemo {
 
 	public static void main(String[] args) {
