@@ -1,8 +1,7 @@
 package com.decoratorPattern;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 interface Food {
 	public String prepareFood();
@@ -79,8 +78,8 @@ public class DecoratorPatter {
 			System.out.print("            3. Chineese Food.         \n");
 			System.out.print("            4. Exit                        \n");
 			System.out.print("Enter your choice: ");
-			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-			choice = Integer.parseInt(br.readLine());
+			Scanner sc=new Scanner(System.in);
+			choice = sc.nextInt();
 			switch (choice) {
 			case 1: {
 				VegFood vf = new VegFood();
