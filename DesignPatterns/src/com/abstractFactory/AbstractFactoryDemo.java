@@ -75,7 +75,6 @@ class ShapeFactory extends AbstractFactory {
 	Color getColor(String color) {
 		return null;
 	}
-
 }
 
 class ColorFactory extends AbstractFactory {
@@ -130,9 +129,8 @@ public class AbstractFactoryDemo {
 			Shape shape = afs.getShape(str1);
 			shape.draw();
 		}
-		
-		AbstractFactory afc = FactoryProducer.getFactory("COLOR");
 
+		AbstractFactory afc = FactoryProducer.getFactory("COLOR");
 
 		for (int i = 0; i < 3; i++) {
 			System.out.println("Enter the color: ");
@@ -141,7 +139,5 @@ public class AbstractFactoryDemo {
 			color.draw();
 		}
 		sc.close();
-
 	}
-
 }
